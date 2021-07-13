@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.communisolve.artbook.model.ImageResponse
 import com.communisolve.artbook.repo.ArtRepository
+import com.communisolve.artbook.repo.ArtRepositoryInterface
 import com.communisolve.artbook.roomdb.Art
 import com.communisolve.artbook.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ArtViewModel @Inject constructor(
-    private val repository: ArtRepository
+    private val repository: ArtRepositoryInterface
 )  : ViewModel() {
 
 
